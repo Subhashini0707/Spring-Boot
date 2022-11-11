@@ -1,0 +1,3 @@
+com\log\Html\Controller\HtmlController.class
+com\log\Html\ServletInitializer.class
+com\log\Html\HtmlApplication.class

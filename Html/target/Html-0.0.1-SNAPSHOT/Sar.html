@@ -1,0 +1,40 @@
+
+<html>
+
+<head>
+<title>Teleapps login Page </title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function () {
+$("#sub").click(function () {
+
+var output = "name=" + $("#uname").val() + "&pass=" + $("#passw").val();
+alert(output);
+$.ajax({
+type:"GET",
+url: "http://localhost:8080/s/login/cont?" + output,
+success: function(data){
+alert(JSON.stringify(data));
+}
+
+});
+});
+
+
+
+});
+</script>
+</head>
+
+<body>
+<h1>Welcome to teleapps Page</h1>
+<form>
+Enter Username : <input type="text" id="uname"><br><br>
+Enter Password : <input type="text" id="passw"><br><br><br><br>
+<input type="submit" id="sub" value="Login">
+
+</form>
+
+</body>
+
+</html>
